@@ -101,6 +101,98 @@ def preguntar_nombre():
   cleaning()
   print("")
   print(f"Hola {nombre}!, bienvenido al juego de piedra, papel o tijera \n")
+  
+#Procedimiento para llevar un conte de las partidas
+def contador(accion_usuario,accion_computadora):
+  global cont 
+  global gana
+  global pierde
+  global empata
+  if accion_usuario=="piedra":
+    if accion_computadora=="piedra":
+      empata +=1
+      print("")
+      print("")
+      print("Resumen:")
+      print("Partidas jugadas:",cont, " Partidas ganadas:",gana ," Partidas perdidas:", pierde, " Partidas empatadas:", empata)
+      print("")
+      cont +=1
+    if accion_computadora =="papel":
+      pierde += 1
+      print("")
+      print("")
+      print("Resumen:")
+      print("Partidas jugadas:",cont, " Partidas ganadas:",gana ," Partidas perdidas:", pierde, " Partidas empatadas:", empata)
+      print("")
+      cont += 1
+    if accion_computadora=="tijera":
+      gana += 1
+      print("")
+      print("")
+      print("Resumen:")
+      print("Partidas jugadas:",cont, " Partidas ganadas:",gana ," Partidas perdidas:", pierde, " Partidas empatadas:", empata)
+      print("")
+      cont +=1
+
+  if accion_usuario=="papel":
+    if accion_computadora=="papel":
+      empata += 1
+      print("")
+      print("")
+      print("Resumen:")
+      print("Partidas jugadas:",cont, " Partidas ganadas:",gana ," Partidas perdidas:", pierde, " Partidas empatadas:", empata)
+      print("")
+      cont +=1
+    if accion_computadora =="tijera":
+      pierde += 1
+      print("")
+      print("")
+      print("Resumen:")
+      print("Partidas jugadas:",cont, " Partidas ganadas:",gana ," Partidas perdidas:", pierde, " Partidas empatadas:", empata)
+      print("")
+      cont +=1
+    if accion_computadora=="piedra":
+      gana += 1
+      print("")
+      print("")
+      print("Resumen:")
+      print("Partidas jugadas:",cont, " Partidas ganadas:",gana ," Partidas perdidas:", pierde, " Partidas empatadas:", empata)
+      print("")
+      cont +=1
+
+  if accion_usuario=="tijera":
+    if accion_computadora=="tijera":
+      empata += 1
+      print("")
+      print("")
+      print("Resumen:")
+      print("Partidas jugadas:",cont, " Partidas ganadas:",gana ," Partidas perdidas:", pierde, " Partidas empatadas:", empata)
+      print("")
+      cont +=1
+    if accion_computadora =="piedra":
+      pierde += 1
+      print("")
+      print("")
+      print("Resumen:")
+      print("Partidas jugadas:",cont, " Partidas ganadas:",gana ," Partidas perdidas:", pierde, " Partidas empatadas:", empata)
+      print("")
+      cont +=1
+    if accion_computadora=="papel":
+      gana += 1
+      print("")
+      print("")
+      print("Resumen:")
+      print("Partidas jugadas:",cont, " Partidas ganadas:",gana ," Partidas perdidas:", pierde, " Partidas empatadas:", empata)
+      print("")
+      cont +=1
+
+
+#Variables globales
+acciones_posibles = ["piedra", "papel", "tijera"]
+cont = 1
+gana = 0
+pierde = 0
+empata = 0
 
   
 #Aqui empieza todo
